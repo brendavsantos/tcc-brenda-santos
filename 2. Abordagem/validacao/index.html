@@ -1,0 +1,719 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../principios/">
+      
+      
+        <link rel="next" href="../verificacao/">
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>2.4 Validação de Acessibilidade - TCC Brenda Santos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.26e3688c.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/styles.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#24-validacao-de-acessibilidade" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="TCC Brenda Santos" class="md-header__button md-logo" aria-label="TCC Brenda Santos" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TCC Brenda Santos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.4   Validação de Acessibilidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../1.%20Come%C3%A7ando%20pelo%20Come%C3%A7o/1contexto/" class="md-tabs__link">
+        1. Começando pelo Começo
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../abordagem/" class="md-tabs__link md-tabs__link--active">
+        2. Abordagem
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TCC Brenda Santos" class="md-nav__button md-logo" aria-label="TCC Brenda Santos" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    TCC Brenda Santos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          1. Começando pelo Começo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          1. Começando pelo Começo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Come%C3%A7ando%20pelo%20Come%C3%A7o/1contexto/" class="md-nav__link">
+        1.1 Contexto Mia Ajuda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Come%C3%A7ando%20pelo%20Come%C3%A7o/2conceitos/" class="md-nav__link">
+        1.2 Conceitos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1.%20Come%C3%A7ando%20pelo%20Come%C3%A7o/3legislacao-normas/" class="md-nav__link">
+        1.3 Legislação e Nomas de Acessibilidade
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          2. Abordagem
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          2. Abordagem
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../abordagem/" class="md-nav__link">
+        2.1 Idéia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../principios/" class="md-nav__link">
+        2.2 Princípios
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          2.4   Validação de Acessibilidade
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        2.4   Validação de Acessibilidade
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#teste-de-usabilidade" class="md-nav__link">
+    Teste de usabilidade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questionarios" class="md-nav__link">
+    Questionários
+  </a>
+  
+    <nav class="md-nav" aria-label="Questionários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacoes-dos-usuarios" class="md-nav__link">
+    Informações dos Usuários
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attrakdiff" class="md-nav__link">
+    Attrakdiff
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verificacao/" class="md-nav__link">
+        2.3 Verificação de Acessibilidade
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#teste-de-usabilidade" class="md-nav__link">
+    Teste de usabilidade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#questionarios" class="md-nav__link">
+    Questionários
+  </a>
+  
+    <nav class="md-nav" aria-label="Questionários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacoes-dos-usuarios" class="md-nav__link">
+    Informações dos Usuários
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attrakdiff" class="md-nav__link">
+    Attrakdiff
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="24-validacao-de-acessibilidade">2.4   Validação de Acessibilidade</h1>
+<p>Descrita como o processo de avaliação da qualidade de produtos, ou componentes, de forma que as necessidades dos usuários sejam atendidas ao
+utilizá-lo, o principal objetivo da validação é garantir que o produto correto esteja sendo
+desenvolvido. Tendo como principal base os requisitos funcionais e não funcionais estabelecidos, através da validação é possível garantir, ao final ou ao longo das fases de
+desenvolvimento, que o produto entregue será alinhado com as expectativas do usuário
+final.</p>
+<h3 id="teste-de-usabilidade">Teste de usabilidade</h3>
+<p>Testes de usabilidade foram utilizados para checar se o software é fácil de usar,
+compreender e navegar por pessoas com diferentes habilidades. Durante a realização dos
+testes de usabilidade com foco na acessibilidade, foi possível identificar, através da observação direta, possíveis barreiras ou dificuldades enfrentadas pelos usuários ao interagir
+com o aplicativo. Para isso, foram considerados perfis variados de usuários que representem a maior diversidade possível dentro dos limites da deficiência visual. Os usuários
+foram convidados a realizar tarefas típicas do software enquanto eram observados, e a
+contribuir posteriormente com feedbacks sobre suas experiências e os desafios enfrentados
+durante os testes.</p>
+<p>O Android Talkback foi utilizado como principal ferramenta de apoio, permitindo
+validar se as informações são comunicadas de maneira clara, e se as interações são devidamente reconhecidas pelo leitor de tela. Além disso, auxiliou na identificação de problemas relacionados à ordem de leitura, à legibilidade do conteúdo, e à usabilidade geral do aplicativo por usuários com deficiência visual. No intuito de conferir um exemplo de como a ferramenta atua, tem-se um vídeo 1 que ilustra o momento que um áudio é gerado na tela,
+pelo TalkBack, quando um item de tela é tocado.</p>
+<p>Para padronizar a execução do teste, foram realizadas as seguintes etapas:</p>
+<ol>
+<li>Introdução à pesquisa: Os usuários receberam um detalhamento sobre o intuito
+geral do teste, sobre qual o aplicativo objeto de estudo e uma breve descrição de
+quais etapas seriam realizadas.</li>
+<li>Assinatura do termo de consentimento: Os usuários foram instruídos a ler e
+assinar o termo de consentimento, caso consentissem em participar da pesquisa. Para
+otimizar o tempo de leitura, foi disponibilizada também a opção onde o aplicador
+do teste realizaria a leitura e apresentaria as explicações de cada parte do termo.</li>
+<li>Informes principais: Após a assinatura do termo, foram explicados o propósito e
+os objetivos específicos do teste, deixando claro que a identidade dos testadores seria
+mantida em sigilo, e que o teste tinha como objetivo avaliar apenas o sistema em
+questão, e não as habilidades dos voluntários. Além disso, os participantes receberam
+um aviso para indicar o início das gravações.</li>
+<li>Solicitação de informações do usuário: Foram solicitadas as respostas neces-
+sárias para preencher o formulário de informações do usuário, que foi devidamente
+respondido pelo avaliador em cada um dos testes.</li>
+<li>Lembretes e execução das atividades: Após finalizado o preenchimento do
+questionário, o avaliador requisitou que os participantes verbalizassem quaisquer
+dúvidas, pois isto ajudaria na descrição e entendimento dos problemas encontrados,
+e que deixassem claro o que estavam tentando fazer e por quê estavam tentando
+fazer daquela forma.</li>
+<li>Período de feedback: Assim que as tarefas foram finalizadas, foi disponibilizado
+um tempo para coleta de feedbacks e opiniões gerais</li>
+</ol>
+<p>Com o objetivo de avaliar a acessibilidade, ou a ausência dela, no aplicativo, foram
+selecionados dois grupos de testadores com perfis distintos. O primeiro grupo foi composto
+por usuários altamente habilidosos e experientes em tecnologia, que se aproximam mais ao
+perfil de ajudante. O segundo grupo incluía pessoas com pouca familiaridade e habilidade
+em tecnologia, mais próximas do perfil de ajudado. Para conduzir essas avaliações, foram
+selecionadas atividades com base nos fluxos mais comuns do sistema, aqueles com os quais
+a maioria dos usuários tinha algum contato. São elas:</p>
+<ul>
+<li>A01 - Cadastro no aplicativo;</li>
+<li>A02 - Fornecimento de informações extra;</li>
+<li>A03 - Visualização do mapa completo;</li>
+<li>A04 - Interação com uma oferta/pedido de outro usuário;</li>
+<li>A05 - Edição de perfil;</li>
+<li>A06 - Edição de endereço, e</li>
+<li>A07 - Login no aplicativo.</li>
+</ul>
+<p>A partir da realização das atividades, foram observadas, documentadas e analisa-
+das as seguintes medidas:</p>
+<ul>
+<li>Tempo de finalização das atividades: O tempo que os testadores levaram para
+realizar tarefas específicas no software foi documentado e avaliado. A métrica serviu
+de auxílio para avaliar a eficiência da interação e a facilidade em realizar ações
+específicas.  </li>
+<li>Taxa de sucesso na conclusão das atividades: A proporção de testadores que
+conseguiram concluir com sucesso as tarefas designadas foi relatada, trazendo indí-
+cios sobre a eficácia do sistema em atender às necessidades dos usuários.  </li>
+<li>Relatos e feedbacks: Os comentários, opiniões e observações subjetivas dos tes-
+tadores sobre a experiência de uso foram registradas, incluindo pontos positivos e
+negativos.  </li>
+<li>Efetividade da tecnologia assistiva: Foi avaliado como a tecnologia assistiva,
+como leitores de tela, lupas de tela ou teclados em Braille, interagiu com o sistema
+e se funcionou conforme o esperado.  </li>
+</ul>
+<h3 id="questionarios">Questionários</h3>
+<p>Embora os questionários não forneçam uma avaliação completa e detalhada da
+acessibilidade, os mesmo têm seu valor, e podem conferir revelações valiosas sobre a percepção dos usuários em relação à acessibilidade do produto. Além do formulário que permitiu armazenar informações importantes do usuário, como faixa etária e escolaridade,
+também foi utilizada uma adaptação do questionário AttrakDiff para validar a experiência do usuário nesse contexto. Foram realizadas adequações para que, de acordo
+com os critérios selecionados pela abordagem, o questionário incluísse aspectos relacionados à acessibilidade e à qualidade da experiência do usuário, principalmente em termos de usabilidade. Sendo assim, a pretensão foi focar na Qualidade Pragmática (QP), acordada no AttrakDiff, havendo a necessidade de adequação dos pares de termos definidos na versão original do questionário, visando contemplar os pilares: Percepção, Operação,
+Compreensão e Robustez.</p>
+<h4 id="informacoes-dos-usuarios">Informações dos Usuários</h4>
+<p>Inicialmente, após a concordância e a assinatura do termo de consentimento, os
+usuários foram convidados a responder um questionário com dados pessoais, e este foi
+preenchido pelo aplicador do teste para facilitar o processo e evitar complicações relacio-
+nadas à acessibilidade de questionários. O intuito principal foi coletar dados básicos dos
+usuários para caracterizá-los de acordo com o perfil de usuário que mais se aproxima, e
+registrar como seus conhecimentos e habilidades podem ter influenciado nas facilidades ou
+obstáculos encontrados durante a realização das atividades. Para isso, foram selecionadas
+as seguintes questões:</p>
+<ol>
+<li>Qual o nome do usuário?</li>
+<li>Qual a faixa etária do usuário?</li>
+<li>Qual o gênero do usuário?</li>
+<li>Qual o nível de escolaridade do usuário?</li>
+<li>O usuário trabalha atualmente?</li>
+<li>Qual a deficiência do usuário?</li>
+<li>O usuário utiliza o leitor de tela ou outras tecnologias assistivas com frequência?</li>
+<li>Onde ele costuma utilizar?</li>
+</ol>
+<h4 id="attrakdiff">Attrakdiff</h4>
+<p>Após a realização do teste, foi proposto o preenchimento do questionário Attrak-
+Diff que, em linhas gerais, permitiu coletar feedbacks qualitativos e quantitativos sobre a
+percepção dos usuários em relação à atratividade, usabilidade e qualidade, dentre outros
+aspectos observados na aplicação. Através dos pares de palavras selecionados, foram co-
+letadas informações subjetivas sobre como os testadores perceberam a acessibilidade do
+aplicativo, incluindo a facilidade de uso com tecnologia assistiva, a clareza do conteúdo,
+a navegabilidade e a experiência global em termos de acessibilidade.
+A aplicação de uma adaptação do questionário foi uma estratégia para avaliar a
+acessibilidade do aplicativo mantendo o viés da experiência do usuário. </p>
+<p>A partir dos pares de palavras selecionadas, também foi possível avaliar aspectos relacionados à usabilidade
+geral, como a eficiência na realização de tarefas, a clareza das informações e a satisfação
+geral. Para isso, a montagem dos campos e palavras foi feita de acordo com o quadro a seguir:</p>
+<p><img alt="attrakdiff" src="../../assets/repositories/attrakdiff.jpg" /></p>
+<p><em>Todas as referências utlilizadas podem ser encontradas no artigo publicado.</em></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
